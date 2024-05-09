@@ -29,51 +29,38 @@ public class Room {
         this.price = price;
     }
 
-    public String getRoomType() {
-        return roomType;
-    }
+    public String getRoomType() { return roomType; }
 
     public void setRoomType(String roomType) {
         this.roomType = roomType;
     }
 
-    public Boolean getOccupied() {
-        return isOccupied;
-    }
-
-    public void setOccupied(Boolean occupied) {
+    public void setOccupied(boolean occupied) {
         isOccupied = occupied;
     }
 
-    public Boolean getDirty() {
-        return isDirty;
-    }
-
-    public void setDirty(Boolean dirty) {
+    public void setDirty(boolean dirty) {
         isDirty = dirty;
     }
 
-    public Boolean getAvailable() {
+    public boolean getAvailable() {
         return isAvailable;
     }
 
-    public void setAvailable(Boolean available) {
+    public void setAvailable(boolean available) {
         isAvailable = available;
     }
 
-    void getNumberOfBeds(){
+    public int getNumberOfBeds() { return numberOfBeds; }
 
-    }
+    public double getPrice(){ return price; }
 
-    void getPrice(){
+    public boolean isOccupied(){ return isOccupied; }
 
-    }
+    public boolean isDirty(){ return isDirty; }
 
-    void isOccupied(){
-
-    }
-
-    void isDirty(){
-
+    public boolean isAvailable(){
+        this.isAvailable = (!isDirty && !isOccupied) ? true : false;
+        return isAvailable;
     }
 }
